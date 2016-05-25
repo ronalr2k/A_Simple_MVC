@@ -2,10 +2,10 @@
 
 class DB
 {
-	private $database = DATABASE;
-	private $username = USER;
-	private $host			= HOST;
-	private $password = PASSWORD;
+	private $database = _DATABASE;
+	private $username = _USER;
+	private $host			= _HOST;
+	private $password = _PASSWORD;
 	private $link;
 
 	public function __construct ()

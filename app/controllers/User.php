@@ -2,8 +2,12 @@
 
 class User extends \Controller
 {
-	public function index ()
+	public function show ($id)
 	{
-		echo "Desde el index del User controller";	
+		$user = $this->model('User');
+		$user = $user->find($id);
+		echo "<pre>";
+		print_r($user);
+		echo "</pre>";
 	}
 }

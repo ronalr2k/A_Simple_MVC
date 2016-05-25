@@ -10,4 +10,9 @@ class Model
 	{
 		$this->db = new DB;
 	}
+
+	public function link ()
+	{
+		return $this->db->get();	
+	}
 }
