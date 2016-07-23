@@ -48,9 +48,20 @@ class User extends Model
 
 	}
 
-	public function erase ()
+	public function erase ($id)
 	{
-		//
+		$response = null;
+		
+		$db = $this->link();
+		$query = "delete from users where id={$id}";
+		$statement = $db->prepare($query);
+		$flag = $statement->execute();
+		if($flag === true)
+		{
+		  $response = true;	
+		}
+
+		return $response;
 	}
 
 	public function all ()

@@ -2,9 +2,9 @@
 
 class Home extends \Controller
 {
-  public function index ()
+  public function index ($name)
   {
-	 echo "desde index home-controller"; 
+	 $this->view('back/main', ['name' => $name]);
   }
   public function show ()
   {

@@ -38,9 +38,11 @@ class User extends \Controller
 	 // 
   }
 
-  public function destroy ()
+  public function destroy ($id)
   {
-	 // 
+	 $user = $this->model('User'); 
+	 $user = $user->erase($id);
+	 var_dump($user);
   }
 
 }
